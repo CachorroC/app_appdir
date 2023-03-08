@@ -31,7 +31,7 @@ export const demos: { name: string; items: Item[] }[] = [
       {
         name: 'Loading',
         slug: 'loading',
-        icon: 'file_convert',
+        icon: 'cached',
         description:
           'Create meaningful Loading UI for specific parts of an app',
       },

@@ -123,12 +123,12 @@ function NavItem({
       href={`/${item.slug}`}
       className={styles.item}
     >
-      <li className={styles.item}>
+      
         <span className='material-symbols-outlined'>
           {item.icon}
         </span>
         <p className={className}>{item.name}</p>
-      </li>
+   
     </Link>
   );
 }
