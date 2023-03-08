@@ -1,8 +1,5 @@
 import { NextLogo } from '#/components/next-logo';
-import {
-  SearchIcon,
-  ShoppingCartIcon,
-} from '@heroicons/react/solid';
+import 'material-symbols';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CartCount } from './cart-count';
@@ -19,14 +16,16 @@ export function Header() {
 
         <div className="relative flex-1">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-            <SearchIcon className="h-5 w-5 text-gray-300" />
+            <span className="material-symbols-outlined">
+              search
+            </span>
           </div>
           <input
             aria-label="Search"
             type="search"
             name="search"
             id="search"
-            className="block w-full rounded-full border-none bg-gray-600 pl-10 font-medium text-gray-200 focus:border-vercel-pink focus:ring-2 focus:ring-vercel-pink"
+            className="focus:border-vercel-pink focus:ring-vercel-pink block w-full rounded-full border-none bg-gray-600 pl-10 font-medium text-gray-200 focus:ring-2"
             autoComplete="off"
           />
         </div>
@@ -34,9 +33,13 @@ export function Header() {
 
       <div className="flex shrink-0 gap-x-3">
         <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-600 text-white">
-          <ShoppingCartIcon className="w-6 text-white" />
-          <div className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-vercel-cyan text-sm font-bold text-cyan-800">
-            <CartCount />
+          <span className="material-symbols-outlined">
+            shopping_cart
+          </span>
+          <div className="bg-vercel-cyan absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-sm font-bold text-cyan-800">
+            <span className="material-symbols-outlined">
+              cart_count
+            </span>
           </div>
         </div>
 

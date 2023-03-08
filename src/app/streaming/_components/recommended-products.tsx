@@ -1,4 +1,4 @@
-import { Product } from '#/types/product';
+import { Product } from '#/@types/product';
 import { ProductCard } from '#/components/product-card';
 
 export async function RecommendedProducts({

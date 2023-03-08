@@ -1,4 +1,4 @@
-import type { Review } from '#/types/review';
+import type { Review } from '#/@types/review';
 import { ProductReviewCard } from '#/components/product-review-card';
 
 export async function Reviews({
