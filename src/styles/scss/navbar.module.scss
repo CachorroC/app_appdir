@@ -18,6 +18,12 @@
   .button2 {
     grid-area: button2;
   }
+  @media screen and ("max-width: 600px") {
+    .header {
+      top: auto;
+      bottom: 0;
+    }
+  }
 }
 .drawer {
   background-color: var(--md-sys-color-surface);
