@@ -1,6 +1,6 @@
 'use client';
-import styles from '../styles/css/navbar.module.css';
-import { demos, type Item } from '../lib/demos';
+import styles from '#/styles/css/navbar.module.css';
+import { demos, type Item } from '#/lib/demos';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Box, Drawer, Toolbar } from '@mui/material';

@@ -1,7 +1,6 @@
-import '../styles/css/globals.css';
-import Navbar from '../components/navbar';
-import styles from '../styles/css/layout.module.css';
-import { AddressBar } from '#/components/address-bar';
+import '#/styles/css/globals.css';
+import Navbar from '#/components/navbar';
+import styles from '#/styles/css/layout.module.css';
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,12 +19,9 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
-        <div>
-          {' '}
-          <AddressBar />
-        </div>
-        <section>
-          <main className={styles.main}> {children}</main>
+
+        <section className={styles.main}>
+          {children}
         </section>
       </body>
     </html>
