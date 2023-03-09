@@ -5,6 +5,7 @@
   "bracketSameLine": false,
   "bracketSpacing": true,
   "singleQuote": true,
+  "htmlWhitespaceSensitivity": "strict",
   "trailingComma": "all",
   "printWidth": 60,
   "singleAttributePerLine": true,

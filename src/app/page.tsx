@@ -19,9 +19,7 @@ export default function Home() {
             key={section.name}
             className={styles.module}
           >
-            <div className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-              {section.name}
-            </div>
+            <h2>{section.name}</h2>
 
             <div className={styles.grid}>
               {section.items.map((item) => {
@@ -31,14 +29,10 @@ export default function Home() {
                     key={item.name}
                     className={styles.module}
                   >
-                    <div className="font-medium text-gray-200 group-hover:text-gray-50">
-                      {item.name}
-                    </div>
+                    <h3>{item.name}</h3>
 
                     {item.description ? (
-                      <div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">
-                        {item.description}
-                      </div>
+                      <p>{item.description}</p>
                     ) : null}
                   </Link>
                 );
