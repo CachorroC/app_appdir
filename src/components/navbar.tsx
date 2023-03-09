@@ -1,6 +1,6 @@
 'use client';
-import styles from '../styles/css/navbar.module.css';
-import { demos, type Item } from '../lib/demos';
+import styles from '#/styles/css/navbar.module.css';
+import { demos, type Item } from '#/lib/demos';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Box, Drawer, Toolbar } from '@mui/material';
@@ -55,47 +55,47 @@ export default function Navbar() {
     <>
       <section className={styles.header}>
         <Link
-          href='/'
+          href="/"
           onClick={close}
           className={styles.menu}
         >
-          <span className='material-symbols-outlined'>
+          <span className="material-symbols-outlined">
             abc
           </span>
         </Link>
         <button
-          type='button'
+          type="button"
           className={styles.button}
           onClick={drawerToggle}
         >
           {isOpen ? (
-            <span className='material-symbols-outlined'>
+            <span className="material-symbols-outlined">
               pets
             </span>
           ) : (
-            <span className='material-symbols-outlined'>
+            <span className="material-symbols-outlined">
               star
             </span>
           )}
         </button>
         <button
-          type='button'
+          type="button"
           className={styles.button2}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <span className='material-symbols-outlined'>
+            <span className="material-symbols-outlined">
               close
             </span>
           ) : (
-            <span className='material-symbols-outlined'>
+            <span className="material-symbols-outlined">
               menu
             </span>
           )}
         </button>
       </section>
       <Drawer
-        variant='temporary'
+        variant="temporary"
         open={isOpen}
         onClose={drawerToggle}
         ModalProps={{ keepMounted: true }}
@@ -123,12 +123,10 @@ function NavItem({
       href={`/${item.slug}`}
       className={styles.item}
     >
-      <li className={styles.item}>
-        <span className='material-symbols-outlined'>
-          {item.icon}
-        </span>
-        <p className={className}>{item.name}</p>
-      </li>
+      <span className="material-symbols-outlined">
+        {item.icon}
+      </span>
+      <p className={className}>{item.name}</p>
     </Link>
   );
 }
