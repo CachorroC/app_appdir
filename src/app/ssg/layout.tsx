@@ -1,4 +1,4 @@
-import { Tab } from '#/components/tab';
+import { Tab } from '#@/components/tab';
 import React from 'react';
 import { RandomPostTab } from './random-post-tab';
 

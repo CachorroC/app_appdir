@@ -1,7 +1,7 @@
-import { fetchCategories } from '#/lib/get-categories';
-import { Boundary } from '#/components/boundary';
-import { TabGroup } from '#/components/tab-group';
-import { CounterProvider } from '#/app/context/counter-context';
+import { fetchCategories } from '#@/lib/get-categories';
+import { Boundary } from '#@/components/boundary';
+import { TabGroup } from '#@/components/tab-group';
+import { CounterProvider } from '#@/app/context/counter-context';
 import React from 'react';
 import ContextClickCounter from './context-click-counter';
 

@@ -1,3 +1,5 @@
 {
-  "peacock.remoteColor": "#ce6487"
+  "peacock.remoteColor": "#ce6487",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

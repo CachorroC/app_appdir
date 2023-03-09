@@ -1,6 +1,6 @@
-import { fetchCategories } from '#/lib/get-categories';
-import { ClickCounter } from '#/components/click-counter';
-import { TabGroup } from '#/components/tab-group';
+import { fetchCategories } from '#@/lib/get-categories';
+import { ClickCounter } from '#@/components/click-counter';
+import { TabGroup } from '#@/components/tab-group';
 import { notFound } from 'next/navigation';
 import React from 'react';
 

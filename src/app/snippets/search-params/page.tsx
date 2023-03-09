@@ -1,5 +1,5 @@
-import { Boundary } from '#/components/boundary';
-import { ExternalLink } from '#/components/external-link';
+import { Boundary } from '#@/components/boundary';
+import { ExternalLink } from '#@/components/external-link';
 import { Suspense } from 'react';
 import ActiveLink from './active-link';
 import Client from './client';

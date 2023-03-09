@@ -1,5 +1,5 @@
-import BuggyButton from '#/components/buggy-button';
-import { ExternalLink } from '#/components/external-link';
+import BuggyButton from '#@/components/buggy-button';
+import { ExternalLink } from '#@/components/external-link';
 
 export default function Page() {
   return (

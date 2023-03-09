@@ -1,4 +1,4 @@
-import { TabGroup } from '#/components/tab-group';
+import { TabGroup } from '#@/components/tab-group';
 import React from 'react';
 
 export const metadata = {

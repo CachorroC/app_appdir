@@ -1,4 +1,4 @@
-import { RenderingInfo } from '#/components/rendering-info';
+import { RenderingInfo } from '#@/components/rendering-info';
 
 export default async function Page({
   params,

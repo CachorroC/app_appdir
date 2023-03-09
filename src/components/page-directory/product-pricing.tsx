@@ -1,9 +1,9 @@
-import { type IProduct } from '#/lib/page-directory/get-products';
-import { ProductEstimatedArrival } from '#/components/product-estimated-arrival';
-import { ProductLowStockWarning } from '#/components/product-low-stock-warning';
-import { ProductPrice } from '#/components/product-price';
-import { ProductSplitPayments } from '#/components/product-split-payments';
-import { ProductUsedPrice } from '#/components/product-used-price';
+import { type IProduct } from '#@/lib/page-directory/get-products';
+import { ProductEstimatedArrival } from '#@/components/product-estimated-arrival';
+import { ProductLowStockWarning } from '#@/components/product-low-stock-warning';
+import { ProductPrice } from '#@/components/product-price';
+import { ProductSplitPayments } from '#@/components/product-split-payments';
+import { ProductUsedPrice } from '#@/components/product-used-price';
 import { dinero, type DineroSnapshot } from 'dinero.js';
 
 export function ProductPricing({

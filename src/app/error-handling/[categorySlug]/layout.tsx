@@ -1,6 +1,6 @@
-import { fetchCategoryBySlug } from '#/lib/get-categories';
-import { ClickCounter } from '#/components/click-counter';
-import { TabGroup } from '#/components/tab-group';
+import { fetchCategoryBySlug } from '#@/lib/get-categories';
+import { ClickCounter } from '#@/components/click-counter';
+import { TabGroup } from '#@/components/tab-group';
 import { notFound } from 'next/navigation';
 
 export default async function Layout({

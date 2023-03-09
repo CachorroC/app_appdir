@@ -1,6 +1,6 @@
-import { fetchCategoryBySlug } from '#/lib/get-categories';
-import { Boundary } from '#/components/boundary';
-import { TabGroup } from '#/components/tab-group';
+import { fetchCategoryBySlug } from '#@/lib/get-categories';
+import { Boundary } from '#@/components/boundary';
+import { TabGroup } from '#@/components/tab-group';
 import { notFound } from 'next/navigation';
 import { Counter } from '../context-click-counter';
 

@@ -1,5 +1,5 @@
-import { Boundary } from '#/components/boundary';
-import { TabNavItem } from '#/components/tab-nav-item';
+import { Boundary } from '#@/components/boundary';
+import { TabNavItem } from '#@/components/tab-nav-item';
 import React from 'react';
 
 export default function Layout({

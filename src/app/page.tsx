@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Poiret_One } from 'next/font/google';
-import styles from '#/styles/css/page.module.css';
+import styles from '#@/styles/css/page.module.css';
 import Link from 'next/link';
-import { demos } from '#/lib/demos';
+import { demos } from '#@/lib/demos';
 
 const poiret = Poiret_One({
   weight: '400',

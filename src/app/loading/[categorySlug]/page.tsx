@@ -1,8 +1,8 @@
 import {
   fetchCategoryBySlug,
   type Category,
-} from '#/lib/get-categories';
-import { SkeletonCard } from '#/components/skeleton-card';
+} from '#@/lib/get-categories';
+import { SkeletonCard } from '#@/components/skeleton-card';
 import { notFound } from 'next/navigation';
 
 const fetchCategory = async (

@@ -1,5 +1,5 @@
-import { fetchCategoryBySlug } from '#/lib/get-categories';
-import { Boundary } from '#/components/boundary';
+import { fetchCategoryBySlug } from '#@/lib/get-categories';
+import { Boundary } from '#@/components/boundary';
 import { notFound } from 'next/navigation';
 import { Counter } from '../context-click-counter';
 

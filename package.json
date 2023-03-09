@@ -3,21 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev && sass --watch src/styles/scss:src/styles/css",
     "build": "next build",
+    "sass" : "sass src/styles/scss:src/styles/css",
     "start": "next start",
     "lint": "next lint",
-    "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "yarn prettier:check && yarn lint"
   },
-  "git": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown"
-  },
+ 
+ 
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -35,7 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "6.0.0-beta.2",
-    "typescript": "next",
+    "typescript": "latest",
     "use-count-up": "^3.0.1"
   },
   "devDependencies": {

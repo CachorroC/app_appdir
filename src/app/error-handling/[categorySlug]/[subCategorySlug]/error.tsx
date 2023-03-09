@@ -1,7 +1,7 @@
 'use client';
 
-import { Boundary } from '#/components/boundary';
-import Button from '#/components/button';
+import { Boundary } from '#@/components/boundary';
+import Button from '#@/components/button';
 import React from 'react';
 
 export default function Error({ error, reset }: any) {

@@ -1,9 +1,9 @@
-import { fetchCategories } from '#/lib/get-categories';
-import { Boundary } from '#/components/boundary';
-import { ClickCounter } from '#/components/click-counter';
-import HooksClient from '#/components/hooks-client';
-import HooksServer from '#/components/hooks-server';
-import { TabGroup } from '#/components/tab-group';
+import { fetchCategories } from '#@/lib/get-categories';
+import { Boundary } from '#@/components/boundary';
+import { ClickCounter } from '#@/components/click-counter';
+import HooksClient from '#@/components/hooks-client';
+import HooksServer from '#@/components/hooks-server';
+import { TabGroup } from '#@/components/tab-group';
 import { notFound } from 'next/navigation';
 import React from 'react';
 

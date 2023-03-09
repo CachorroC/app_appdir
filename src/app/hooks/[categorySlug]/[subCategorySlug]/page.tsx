@@ -1,5 +1,5 @@
-import { fetchSubCategory } from '#/lib/get-categories';
-import { SkeletonCard } from '#/components/skeleton-card';
+import { fetchSubCategory } from '#@/lib/get-categories';
+import { SkeletonCard } from '#@/components/skeleton-card';
 import { notFound } from 'next/navigation';
 
 export default async function Page({

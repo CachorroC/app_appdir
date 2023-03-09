@@ -1,6 +1,6 @@
-import { fetchCategoryBySlug } from '#/lib/get-categories';
-import BuggyButton from '#/components/buggy-button';
-import { SkeletonCard } from '#/components/skeleton-card';
+import { fetchCategoryBySlug } from '#@/lib/get-categories';
+import BuggyButton from '#@/components/buggy-button';
+import { SkeletonCard } from '#@/components/skeleton-card';
 import { notFound } from 'next/navigation';
 
 export default async function Page({

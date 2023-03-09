@@ -1,9 +1,7 @@
 @import url(./theme/tokens.css);
 @import url(./theme/colors.module.css);
-@import url(./theme/theme.light.css)
-(prefers-color-scheme: light);
-@import url(./theme/theme.dark.css)
-(prefers-color-scheme: dark);
+@import url(./theme/theme.light.css) (prefers-color-scheme: light);
+@import url(./theme/theme.dark.css) (prefers-color-scheme: dark);
 :root {
   --md-surface-1: rgba(167, 0, 176, 0.08);
   --md-surface-2: rgba(167, 0, 176, 0.12);
@@ -441,11 +439,7 @@
 :root,
 html {
   box-sizing: content-box;
-  font-size: clamp(
-    var(--minFontSize),
-    var(--scaler),
-    var(--maxFontSize)
-  );
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
   font-size: min(max(1rem, 4vw), 22px);
 }
 :root > *,
