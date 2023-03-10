@@ -441,18 +441,13 @@ html {
   box-sizing: content-box;
   font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
   font-size: min(max(1rem, 4vw), 22px);
+  font-size: calc(16px + 6 * (100vw - 320px) / 680);
 }
 :root > *,
 html > * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-@media screen and (min-width: 320px) {
-  :root,
-  html {
-    font-size: calc(16px + 6 * (100vw - 320px) / 680);
-  }
 }
 
 * {
