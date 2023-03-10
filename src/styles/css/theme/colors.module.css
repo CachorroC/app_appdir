@@ -23,9 +23,7 @@
 }
 
 .on-primary-container {
-  background-color: var(
-    --md-sys-color-on-primary-container
-  );
+  background-color: var(--md-sys-color-on-primary-container);
 }
 
 .on-primary-container-text {
@@ -57,9 +55,7 @@
 }
 
 .on-secondary-container {
-  background-color: var(
-    --md-sys-color-on-secondary-container
-  );
+  background-color: var(--md-sys-color-on-secondary-container);
 }
 
 .on-secondary-container-text {
@@ -91,9 +87,7 @@
 }
 
 .on-tertiary-container {
-  background-color: var(
-    --md-sys-color-on-tertiary-container
-  );
+  background-color: var(--md-sys-color-on-tertiary-container);
 }
 
 .on-tertiary-container-text {

@@ -1,9 +1,9 @@
 :root {
-  --md-surface-1: rgba(167, 0, 176, 0.08);
-  --md-surface-2: rgba(167, 0, 176, 0.12);
-  --md-surface-3: rgba(167, 0, 176, 0.14);
-  --md-surface-4: rgba(167, 0, 176, 0.16);
-  --md-surface-5: rgba(167, 0, 176, 0.18);
+  --md-surface-1: rgba(166, 0, 175, 0.08);
+  --md-surface-2: rgba(166, 0, 175, 0.12);
+  --md-surface-3: rgba(166, 0, 175, 0.14);
+  --md-surface-4: rgba(166, 0, 175, 0.16);
+  --md-surface-5: rgba(166, 0, 175, 0.18);
 
   --md-source: rgb(167, 0, 176);
   /* primary */
@@ -13,7 +13,7 @@
   --md-ref-palette-primary25: #6c0072;
   --md-ref-palette-primary30: #7f0086;
   --md-ref-palette-primary35: #92009a;
-  --md-ref-palette-primary40: #a600af;
+  --md-ref-palette-primary40: rgb(166, 0, 175);
   --md-ref-palette-primary50: #c532cb;
   --md-ref-palette-primary60: #e351e8;
   --md-ref-palette-primary70: #fe74ff;
@@ -64,7 +64,7 @@
   --md-ref-palette-neutral25: #3b2d81;
   --md-ref-palette-neutral30: #47398d;
   --md-ref-palette-neutral35: #53469a;
-  --md-ref-palette-neutral40: #5f52a7;
+  --md-ref-palette-neutral40: rgb(95, 82, 167);
   --md-ref-palette-neutral50: #786bc2;
   --md-ref-palette-neutral60: #9285dd;
   --md-ref-palette-neutral70: #ad9ffa;
@@ -162,7 +162,7 @@
     --md-ref-palette-neutral10
   );
   --md-sys-color-surface-light: var(
-    --md-ref-palette-neutral-variant98
+    --md-ref-palette-neutral95
   );
   --md-sys-color-on-surface-light: var(
     --md-ref-palette-neutral10

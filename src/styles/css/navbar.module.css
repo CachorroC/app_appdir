@@ -32,7 +32,8 @@
   display: grid;
   height: 100%;
   place-items: stretch;
-  gap: 0;
+  gap: 2vh;
+  padding: 2vh;
   align-content: stretch;
   justify-content: space-around;
   text-align: center;
@@ -47,6 +48,7 @@
   justify-content: space-evenly;
   width: 100%;
   padding: 2%;
+  gap: 2vh;
 }
 .drawer .menu .list {
   display: grid;
@@ -59,8 +61,6 @@
   height: 100%;
 }
 .drawer .menu .list .item {
-  background-color: var(--md-surface-1);
-  box-shadow: var(--md-elevation-3);
   margin: 0;
   width: auto;
   min-width: 5rem;
@@ -70,7 +70,32 @@
   justify-content: space-evenly;
   border-radius: 2rem;
 }
-.drawer .menu .list .item:active, .drawer .menu .list .item:hover {
+.drawer .menu .list .item:link {
+  background-color: var(--md-surface-1);
+  color: var(--md-sys-color-on-surface);
+  box-shadow: var(--md-elevation-3);
+}
+.drawer .menu .list .item:link > span {
+  color: var(--md-sys-color-tertiary);
+}
+.drawer .menu .list .item:visited {
+  background-color: var(--md-sys-color-inverse-outline);
+  color: var(--md-sys-color-outline);
+  box-shadow: var(--md-surface-0);
+}
+.drawer .menu .list .item:visited > span {
+  color: var(--md-sys-color-outline);
+}
+.drawer .menu .list .item:hover {
+  background-color: var(--md-surface-3);
+  box-shadow: var(--md-elevation-10);
+}
+.drawer .menu .list .item:focus {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border: 2px dashed var(--md-sys-color-secondary);
+}
+.drawer .menu .list .item:active {
   background-color: var(--md-surface-5);
   box-shadow: var(--md-elevation-8);
 }
