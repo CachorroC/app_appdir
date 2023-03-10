@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -24,9 +20,7 @@
       }
     ],
     "paths": {
-      "#@/*": [
-        "./src/*"
-      ]
+      "#@/*": ["./src/*"]
     }
   },
   "include": [
@@ -37,7 +31,5 @@
     "/home/cachorro_cami/.Github/app_appdir/.next/types/**/*.ts",
     "/home/cachorro_cami/Documentos/Github/app_appdir/.next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

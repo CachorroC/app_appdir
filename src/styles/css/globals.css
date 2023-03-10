@@ -1,7 +1,9 @@
 @import url(./theme/tokens.css);
 @import url(./theme/colors.module.css);
-@import url(./theme/theme.light.css) (prefers-color-scheme: light);
-@import url(./theme/theme.dark.css) (prefers-color-scheme: dark);
+@import url(./theme/theme.light.css)
+(prefers-color-scheme: light);
+@import url(./theme/theme.dark.css)
+(prefers-color-scheme: dark);
 :root {
   --md-surface-1: rgba(167, 0, 176, 0.08);
   --md-surface-2: rgba(167, 0, 176, 0.12);
@@ -365,8 +367,8 @@
     0px 24px 38px 3px rgba(0, 0, 0, 0.14),
     0px 9px 46px 8px rgba(0, 0, 0, 0.12);
   --minFontSize: 16px;
-  --maxFontSize: 20px;
-  --scaler: 4vw;
+  --maxFontSize: 22px;
+  --scaler: 1vw;
 }
 
 :root {
@@ -439,19 +441,19 @@
 :root,
 html {
   box-sizing: content-box;
-  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
-  font-size: min(max(1rem, 4vw), 22px);
-  font-size: calc(16px + 6 * (100vw - 320px) / 680);
-}
-:root > *,
-html > * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-size: clamp(
+    var(--minFontSize),
+    var(--scaler),
+    var(--maxFontSize)
+  );
+  /* font-size: min(max(1rem, 4vw), 22px);
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
 }
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
 html,
@@ -473,7 +475,7 @@ a {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 auto;
 }
 
