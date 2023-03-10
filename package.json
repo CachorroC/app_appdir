@@ -10,7 +10,8 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "test": "yarn prettier:check && yarn lint"
+    "test": "yarn prettier:check && yarn lint",
+    "docker": "docker build --tag app:latest ."
   },
   "git": {
     "pre-commit": "lint-staged"
