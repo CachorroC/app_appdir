@@ -1,10 +1,4 @@
-export const ExternalLink = ({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) => {
+export const ExternalLink = ({ children, href }: { children: React.ReactNode; href: string }) => {
   return (
     <a
       href={href}
@@ -12,9 +6,7 @@ export const ExternalLink = ({
     >
       <div>{children}</div>
 
-      <span className="material-symbols-outlined">
-        arrow_right
-      </span>
+      <span className="material-symbols-outlined">arrow_right</span>
     </a>
   );
 };

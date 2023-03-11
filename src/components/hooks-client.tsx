@@ -1,16 +1,11 @@
 'use client';
 
 import React from 'react';
-import {
-  usePathname,
-  useSelectedLayoutSegments,
-  useSearchParams,
-} from 'next/navigation';
+import { usePathname, useSelectedLayoutSegments, useSearchParams } from 'next/navigation';
 
 const HooksClient = () => {
   const pathname = usePathname();
-  const selectedLayoutSegments =
-    useSelectedLayoutSegments();
+  const selectedLayoutSegments = useSelectedLayoutSegments();
   const searchParams = useSearchParams();
   const searchParam = searchParams?.get('key');
 
@@ -21,9 +16,7 @@ const HooksClient = () => {
           {
             usePathname: pathname,
             selectedLayoutSegments: selectedLayoutSegments,
-            useSearchParams: searchParams
-              ? Object.fromEntries(searchParams.entries())
-              : {},
+            useSearchParams: searchParams ? Object.fromEntries(searchParams.entries()) : {},
             "useSearchParam('key')": searchParam,
             useRouter: {
               push: '(string) => void',

@@ -13,15 +13,13 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Nested Layouts',
         slug: 'layouts',
         icon: 'view_quilt',
-        description:
-          'Create UI that is shared across routes',
+        description: 'Create UI that is shared across routes',
       },
       {
         name: 'Grouped Layouts',
         slug: 'route-groups',
         icon: 'view_cozy',
-        description:
-          'Organize routes without affecting URL paths',
+        description: 'Organize routes without affecting URL paths',
       },
     ],
   },
@@ -32,22 +30,19 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Loading',
         slug: 'loading',
         icon: 'cached',
-        description:
-          'Create meaningful Loading UI for specific parts of an app',
+        description: 'Create meaningful Loading UI for specific parts of an app',
       },
       {
         name: 'Error',
         slug: 'error-handling',
         icon: 'warning',
-        description:
-          'Create Error UI for specific parts of an app',
+        description: 'Create Error UI for specific parts of an app',
       },
       {
         name: 'Not Found',
         slug: 'not-found',
         icon: 'search_off',
-        description:
-          'Create Not Found UI for specific parts of an app',
+        description: 'Create Not Found UI for specific parts of an app',
       },
     ],
   },
@@ -58,8 +53,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Streaming with Suspense',
         slug: 'streaming',
         icon: 'cast_connected',
-        description:
-          'Streaming data fetching from the server with React Suspense',
+        description: 'Streaming data fetching from the server with React Suspense',
       },
       {
         name: 'Static-Site Generation',
@@ -77,8 +71,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Incremental Static Regeneration',
         slug: 'isr',
         icon: 'empty_dashboard',
-        description:
-          'Get the best of both worlds between static & dynamic',
+        description: 'Get the best of both worlds between static & dynamic',
       },
     ],
   },
@@ -96,8 +89,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Client Context',
         slug: 'context',
         icon: 'autorenew',
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
+        description: 'Pass context between Client Components that cross Server/Client Component boundary',
       },
     ],
   },
@@ -108,15 +100,13 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'CSS and CSS-in-JS',
         slug: 'styling',
         icon: 'css',
-        description:
-          'Preview the supported styling solutions',
+        description: 'Preview the supported styling solutions',
       },
       {
         name: 'Code Snippets',
         slug: 'snippets',
         icon: 'code',
-        description:
-          'A collection of useful App Router code snippets',
+        description: 'A collection of useful App Router code snippets',
       },
     ],
   },

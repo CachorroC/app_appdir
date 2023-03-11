@@ -1,14 +1,6 @@
 import Link from 'next/link';
 
-export const SectionLink = ({
-  children,
-  href,
-  text,
-}: {
-  children: React.ReactNode;
-  href: string;
-  text: string;
-}) => (
+export const SectionLink = ({ children, href, text }: { children: React.ReactNode; href: string; text: string }) => (
   <Link
     href={href}
     className="group block space-y-2"

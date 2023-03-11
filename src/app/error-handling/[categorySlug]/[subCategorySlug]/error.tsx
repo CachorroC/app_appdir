@@ -11,9 +11,7 @@ export default function Error({ error, reset }: any) {
 
   return (
     <Boundary
-      labels={[
-        './[categorySlug]/[subCategorySlug]/error.tsx',
-      ]}
+      labels={['./[categorySlug]/[subCategorySlug]/error.tsx']}
       color="pink"
     >
       <div className="space-y-4">

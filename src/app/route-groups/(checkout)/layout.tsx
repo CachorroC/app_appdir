@@ -2,11 +2,7 @@ import { Boundary } from '#@/components/boundary';
 import { TabNavItem } from '#@/components/tab-nav-item';
 import React from 'react';
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Boundary
       labels={['checkout layout']}
@@ -16,9 +12,7 @@ export default function Layout({
       <div className="space-y-9">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-4">
-            <TabNavItem href="/route-groups">
-              Back
-            </TabNavItem>
+            <TabNavItem href="/route-groups">Back</TabNavItem>
           </div>
         </div>
 

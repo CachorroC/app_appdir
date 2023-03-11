@@ -4,10 +4,7 @@ import ms from 'ms';
 import { useEffect, useRef, useState } from 'react';
 
 // https://github.com/streamich/react-use/blob/master/src/useInterval.ts
-const useInterval = (
-  callback: Function,
-  delay?: number | null,
-) => {
+const useInterval = (callback: Function, delay?: number | null) => {
   const savedCallback = useRef<Function>(() => {});
 
   useEffect(() => {
@@ -16,10 +13,7 @@ const useInterval = (
 
   useEffect(() => {
     if (delay !== null) {
-      const interval = setInterval(
-        () => savedCallback.current(),
-        delay || 0,
-      );
+      const interval = setInterval(() => savedCallback.current(), delay || 0);
       return () => clearInterval(interval);
     }
 
@@ -27,11 +21,7 @@ const useInterval = (
   }, [delay]);
 };
 
-export function RenderedTimeAgo({
-  timestamp,
-}: {
-  timestamp: number;
-}) {
+export function RenderedTimeAgo({ timestamp }: { timestamp: number }) {
   const [msAgo, setMsAgo] = useState<number>(0);
 
   // update on page change

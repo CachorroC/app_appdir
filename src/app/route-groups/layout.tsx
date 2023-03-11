@@ -4,10 +4,6 @@ export const metadata = {
   title: 'Route Groups',
 };
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
 }

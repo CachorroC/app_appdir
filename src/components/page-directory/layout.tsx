@@ -4,11 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-export function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
       <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
@@ -23,9 +19,7 @@ export function Layout({
                 </Link>
                 <div className="relative flex-1">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <span className="material-symbols-outlined">
-                      search
-                    </span>
+                    <span className="material-symbols-outlined">search</span>
                   </div>
                   <input
                     aria-label="Search"
@@ -40,9 +34,7 @@ export function Layout({
 
               <div className="flex shrink-0 space-x-3">
                 <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-600 text-white">
-                  <span className="material-symbols-outlined">
-                    shopping_cart
-                  </span>
+                  <span className="material-symbols-outlined">shopping_cart</span>
                   <div className="bg-vercel-pink absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full text-sm font-bold text-white">
                     0
                   </div>

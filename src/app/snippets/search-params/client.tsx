@@ -1,11 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import {
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
 
 export default function Client({
@@ -54,31 +50,20 @@ export default function Client({
       <div className="flex items-center gap-6">
         {options.map((option) => (
           <div key={option.name}>
-            <div className="text-gray-400">
-              {option.name}
-            </div>
+            <div className="text-gray-400">{option.name}</div>
 
             <div className="mt-1 flex gap-2">
               {option.items.map((item) => {
-                const isActive =
-                  selectedOptions.get(option.value) ===
-                  item;
+                const isActive = selectedOptions.get(option.value) === item;
 
                 return (
                   <button
                     key={item}
-                    onClick={() =>
-                      updateSearchParam(option.value, item)
-                    }
-                    className={clsx(
-                      'rounded-lg px-3 py-1 text-sm font-medium',
-                      {
-                        'bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-white':
-                          !isActive,
-                        'bg-vercel-blue text-white':
-                          isActive,
-                      },
-                    )}
+                    onClick={() => updateSearchParam(option.value, item)}
+                    className={clsx('rounded-lg px-3 py-1 text-sm font-medium', {
+                      'bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-white': !isActive,
+                      'bg-vercel-blue text-white': isActive,
+                    })}
                   >
                     {item}
                   </button>

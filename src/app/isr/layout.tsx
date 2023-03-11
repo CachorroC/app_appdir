@@ -5,11 +5,7 @@ export const metadata = {
   title: 'Incremental Static Regeneration (ISR)',
 };
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const ids = [{ id: '1' }, { id: '2' }, { id: '3' }];
 
   return (

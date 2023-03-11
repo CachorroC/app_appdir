@@ -3,14 +3,8 @@ import { Boundary } from '#@/components/boundary';
 import { notFound } from 'next/navigation';
 import { Counter } from '../context-click-counter';
 
-export default async function Page({
-  params,
-}: {
-  params: { categorySlug: string };
-}) {
-  const category = await fetchCategoryBySlug(
-    params.categorySlug,
-  );
+export default async function Page({ params }: { params: { categorySlug: string } }) {
+  const category = await fetchCategoryBySlug(params.categorySlug);
   if (!category) notFound();
 
   return (
@@ -19,9 +13,7 @@ export default async function Page({
       animateRerendering={false}
     >
       <div className="space-y-8">
-        <h1 className="text-xl font-medium text-gray-400/80">
-          All {category.name}
-        </h1>
+        <h1 className="text-xl font-medium text-gray-400/80">All {category.name}</h1>
 
         <Counter />
       </div>

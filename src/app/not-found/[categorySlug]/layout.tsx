@@ -10,9 +10,7 @@ export default async function Layout({
   children: React.ReactNode;
   params: { categorySlug: string };
 }) {
-  const category = await fetchCategoryBySlug(
-    params.categorySlug,
-  );
+  const category = await fetchCategoryBySlug(params.categorySlug);
 
   // If this category is not found, render `not-found.tsx` in the
   // closest **parent** segment.

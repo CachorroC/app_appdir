@@ -3,11 +3,7 @@ import { ProductPricing } from '#@/components/page-directory/product-pricing';
 import { ProductRating } from '#@/components/product-rating';
 import Image from 'next/image';
 
-export const Product = ({
-  product,
-}: {
-  product: IProduct;
-}) => {
+export const Product = ({ product }: { product: IProduct }) => {
   return (
     <div className="grid grid-cols-4 gap-6">
       <div className="col-span-full lg:col-span-1">
@@ -64,15 +60,11 @@ export const Product = ({
       </div>
 
       <div className="col-span-full space-y-4 lg:col-span-2">
-        <h1 className="truncate text-xl font-medium text-white lg:text-3xl">
-          {product.name}
-        </h1>
+        <h1 className="truncate text-xl font-medium text-white lg:text-3xl">{product.name}</h1>
 
         <ProductRating rating={product.rating} />
 
-        <div className="space-y-4 text-gray-200">
-          {product.description}
-        </div>
+        <div className="space-y-4 text-gray-200">{product.description}</div>
       </div>
 
       <div className="col-span-full lg:col-span-1">

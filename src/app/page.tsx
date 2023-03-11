@@ -31,9 +31,7 @@ export default function Home() {
                   >
                     <h3>{item.name}</h3>
 
-                    {item.description ? (
-                      <p>{item.description}</p>
-                    ) : null}
+                    {item.description ? <p>{item.description}</p> : null}
                   </Link>
                 );
               })}

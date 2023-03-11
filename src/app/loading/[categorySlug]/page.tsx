@@ -1,13 +1,8 @@
-import {
-  fetchCategoryBySlug,
-  type Category,
-} from '#@/lib/get-categories';
+import { fetchCategoryBySlug, type Category } from '#@/lib/get-categories';
 import { SkeletonCard } from '#@/components/skeleton-card';
 import { notFound } from 'next/navigation';
 
-const fetchCategory = async (
-  categorySlug: string | undefined,
-): Promise<Category | undefined> => {
+const fetchCategory = async (categorySlug: string | undefined): Promise<Category | undefined> => {
   // artificial delay
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
@@ -16,26 +11,18 @@ const fetchCategory = async (
   return await fetchCategoryBySlug(categorySlug);
 };
 
-export default async function Page({
-  params,
-}: {
-  params: { categorySlug: string };
-}) {
+export default async function Page({ params }: { params: { categorySlug: string } }) {
   const category = await fetchCategory(params.categorySlug);
   if (!category) notFound();
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">
-        {category.name}
-      </h1>
+      <h1 className="text-xl font-medium text-gray-400/80">{category.name}</h1>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        {Array.from({ length: category.count }).map(
-          (_, i) => (
-            <SkeletonCard key={i} />
-          ),
-        )}
+        {Array.from({ length: category.count }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
       </div>
     </div>
   );

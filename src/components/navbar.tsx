@@ -15,7 +15,7 @@ const poiret = Poiret_One({
   display: 'swap',
 });
 
-export default function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   const drawerToggle = () => {
@@ -23,9 +23,9 @@ export default function Navbar() {
   };
 
   const drawer = (
-    <Toolbar
+    <div
       className={styles.drawer}
-      onClick={drawerToggle}
+      onClick={close}
     >
       {demos.map((section) => {
         return (
@@ -33,9 +33,7 @@ export default function Navbar() {
             key={section.name}
             className={styles.menu}
           >
-            <h1 className={poiret.className}>
-              {section.name}
-            </h1>
+            <h1 className={poiret.className}>{section.name}</h1>
             <ul className={styles.list}>
               {section.items.map((item) => (
                 <NavItem
@@ -49,7 +47,7 @@ export default function Navbar() {
           </nav>
         );
       })}
-    </Toolbar>
+    </div>
   );
   return (
     <>
@@ -57,11 +55,9 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={close}
-          className={styles.menu}
+          className={styles.button}
         >
-          <span className="material-symbols-outlined">
-            abc
-          </span>
+          <span className="material-symbols-outlined">cabin</span>
         </Link>
         <button
           type="button"
@@ -69,28 +65,20 @@ export default function Navbar() {
           onClick={drawerToggle}
         >
           {isOpen ? (
-            <span className="material-symbols-outlined">
-              pets
-            </span>
+            <span className="material-symbols-outlined">pets</span>
           ) : (
-            <span className="material-symbols-outlined">
-              star
-            </span>
+            <span className="material-symbols-outlined">star</span>
           )}
         </button>
         <button
           type="button"
-          className={styles.button2}
+          className={styles.button}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <span className="material-symbols-outlined">
-              close
-            </span>
+            <span className="material-symbols-outlined">close</span>
           ) : (
-            <span className="material-symbols-outlined">
-              menu
-            </span>
+            <span className="material-symbols-outlined">menu</span>
           )}
         </button>
       </section>
@@ -104,17 +92,9 @@ export default function Navbar() {
       </Drawer>
     </>
   );
-}
+};
 
-function NavItem({
-  item,
-  className,
-  close,
-}: {
-  item: Item;
-  className: string;
-  close: () => false | void;
-}) {
+const NavItem = ({ item, className, close }: { item: Item; className: string; close: () => false | void }) => {
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
   return (
@@ -123,10 +103,10 @@ function NavItem({
       href={`/${item.slug}`}
       className={styles.item}
     >
-      <span className="material-symbols-outlined">
-        {item.icon}
-      </span>
+      <span className="material-symbols-outlined">{item.icon}</span>
       <p className={className}>{item.name}</p>
     </Link>
   );
-}
+};
+
+export default Navbar;

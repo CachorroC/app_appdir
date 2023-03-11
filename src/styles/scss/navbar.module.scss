@@ -6,18 +6,13 @@
   height: 5vh;
   display: grid;
   box-shadow: var(--md-elevation-3);
-  background-color: var(--md-sys-color-tertiary);
+  background-color: var(--md-sys-color-secondary-container);
   grid-template-areas: '. button button2 . navbar navbar navbar ';
-  button {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
+  & > .button {
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
   }
-  .button {
-    grid-area: button;
-  }
-  .button2 {
-    grid-area: button2;
-  }
+
   @media screen and (max-width: 600px) {
     .header {
       top: auto;
@@ -25,6 +20,51 @@
     }
   }
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  & > a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+
+  & > .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    padding-top: 15px;
+    & > a {
+      font-size: 18px;
+    }
+  }
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
 .drawer {
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -74,11 +114,9 @@
           }
         }
         &:visited {
-          background-color: var(
-            --md-sys-color-inverse-outline
-          );
+          background-color: var(--md-sys-color-inverse-outline);
           color: var(--md-sys-color-outline);
-          box-shadow: var(--md-surface-0);
+          box-shadow: var(--md-elevation-0);
           & > span {
             color: var(--md-sys-color-outline);
           }
@@ -88,9 +126,7 @@
           box-shadow: var(--md-elevation-10);
         }
         &:focus {
-          background-color: var(
-            --md-sys-color-secondary-container
-          );
+          background-color: var(--md-sys-color-secondary-container);
           color: var(--md-sys-color-on-secondary-container);
           border: 2px dashed var(--md-sys-color-secondary);
         }

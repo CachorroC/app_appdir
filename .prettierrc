@@ -7,7 +7,7 @@
   "singleQuote": true,
   "htmlWhitespaceSensitivity": "strict",
   "trailingComma": "all",
-  "printWidth": 60,
+  "printWidth": 120,
   "singleAttributePerLine": true,
   "semi": true
 }

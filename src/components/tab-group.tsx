@@ -6,13 +6,7 @@ export type Item = {
   segment?: string;
 };
 
-export const TabGroup = ({
-  path,
-  items,
-}: {
-  path: string;
-  items: Item[];
-}) => {
+export const TabGroup = ({ path, items }: { path: string; items: Item[] }) => {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {items.map((item) => (

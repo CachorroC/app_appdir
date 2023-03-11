@@ -24,24 +24,17 @@ const options = [
 
 export const dynamic = 'force-dynamic';
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: any;
-}) {
+export default async function Page({ searchParams }: { searchParams: any }) {
   return (
     <div className="prose prose-sm prose-invert max-w-none">
       <h1 className="text-lg font-bold">
         Updating <code>searchParams</code>
       </h1>
       <p>
-        The <code>useSearchParams</code> hook returns a read
-        only version of <code>URLSearchParams</code>. You
-        can use <code>useRouter&#40;&#41;</code> or{' '}
-        <code>&lt;Link&gt;</code> to set new{' '}
-        <code>searchParams</code>. After a navigation is
-        performed, the current <code>page.js</code> will
-        receive an updated <code>searchParams</code> prop.
+        The <code>useSearchParams</code> hook returns a read only version of <code>URLSearchParams</code>. You can use{' '}
+        <code>useRouter&#40;&#41;</code> or <code>&lt;Link&gt;</code> to set new <code>searchParams</code>. After a
+        navigation is performed, the current <code>page.js</code> will receive an updated <code>searchParams</code>{' '}
+        prop.
       </p>
       <div className="mt-12 space-y-12">
         <div className="space-y-4">
@@ -58,9 +51,7 @@ export default async function Page({
             </Suspense>
           </Boundary>
 
-          <ExternalLink href="https://beta.nextjs.org/docs/api-reference/use-search-params">
-            Docs
-          </ExternalLink>
+          <ExternalLink href="https://beta.nextjs.org/docs/api-reference/use-search-params">Docs</ExternalLink>
         </div>
 
         <div className="space-y-4">
@@ -73,24 +64,18 @@ export default async function Page({
               {options.map((option) => {
                 return (
                   <div key={option.name}>
-                    <div className="text-gray-400">
-                      {option.name}
-                    </div>
+                    <div className="text-gray-400">{option.name}</div>
 
                     <div className="mt-1 flex gap-2">
                       {option.items.map((item, i) => {
                         const isActive =
                           // set the first item as active if no search param is set
-                          (!searchParams[option.value] &&
-                            i === 0) ||
+                          (!searchParams[option.value] && i === 0) ||
                           // otherwise check if the current item is the active one
-                          item ===
-                            searchParams[option.value];
+                          item === searchParams[option.value];
 
                         // create new searchParams object for easier manipulation
-                        const params = new URLSearchParams(
-                          searchParams,
-                        );
+                        const params = new URLSearchParams(searchParams);
                         params.set(option.value, item);
                         return (
                           <ActiveLink
@@ -109,9 +94,7 @@ export default async function Page({
             </div>
           </Boundary>
 
-          <ExternalLink href="https://beta.nextjs.org/docs/api-reference/file-conventions/page">
-            Docs
-          </ExternalLink>
+          <ExternalLink href="https://beta.nextjs.org/docs/api-reference/file-conventions/page">Docs</ExternalLink>
         </div>
       </div>
     </div>

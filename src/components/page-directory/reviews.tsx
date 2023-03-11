@@ -2,16 +2,10 @@ import { type IReview } from '#@/lib/page-directory/get-products';
 import { ProductReviewCard as ProductReviewCardCss } from '#@/components/product-review-card';
 // import { ProductReviewCard as ReviewCssModules } from '#@/components/modules/ProductReviewCard';
 
-export function Reviews({
-  reviews,
-}: {
-  reviews: IReview[];
-}) {
+export function Reviews({ reviews }: { reviews: IReview[] }) {
   return (
     <div className="space-y-7">
-      <h3 className="text-2xl font-medium text-white">
-        Customer Reviews
-      </h3>
+      <h3 className="text-2xl font-medium text-white">Customer Reviews</h3>
       <div className="space-y-8">
         {reviews.map((review) => {
           return (

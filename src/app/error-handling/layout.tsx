@@ -7,11 +7,7 @@ export const metadata = {
   title: 'Error Handling',
 };
 
-export default async function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const categories = await fetchCategories();
   return (
     <div className="space-y-9">

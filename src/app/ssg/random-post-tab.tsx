@@ -4,8 +4,7 @@ import { Tab } from '#@/components/tab';
 import clsx from 'clsx';
 import React, { useEffect } from 'react';
 
-const randomNumber = (min: number, max: number) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+const randomNumber = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 
 export function RandomPostTab({ path }: { path: string }) {
   const [post, setPost] = React.useState<null | {

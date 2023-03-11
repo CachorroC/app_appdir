@@ -4,21 +4,13 @@ import path from 'path';
 export const getProducts = async () => {
   // We'd normally get data from an external data source
   return JSON.parse(
-    await fs.readFile(
-      path.join(process.cwd(), 'lib/page-directory') +
-        '/products.json',
-      'utf8',
-    ),
+    await fs.readFile(path.join(process.cwd(), 'lib/page-directory') + '/products.json', 'utf8'),
   ) as SingleProduct[];
 };
 
 const getReviews = async () => {
   return JSON.parse(
-    await fs.readFile(
-      path.join(process.cwd(), 'lib/page-directory') +
-        '/reviews.json',
-      'utf8',
-    ),
+    await fs.readFile(path.join(process.cwd(), 'lib/page-directory') + '/reviews.json', 'utf8'),
   ) as IReview[];
 };
 
@@ -26,16 +18,12 @@ export const getProduct = async (id: string) => {
   const products = await getProducts();
   const reviews = await getReviews();
 
-  const product = products.find(
-    (product) => product.id === id,
-  ) as SingleProduct;
+  const product = products.find((product) => product.id === id) as SingleProduct;
 
   return {
     product,
     reviews,
-    similarProducts: products.filter(
-      (product) => product.id !== id,
-    ),
+    similarProducts: products.filter((product) => product.id !== id),
   };
 };
 
@@ -89,6 +77,4 @@ export type SingleProduct = IProduct & {
   similarProducts: IProduct[];
 };
 
-export type GetProduct = Awaited<
-  ReturnType<typeof getProduct>
->;
+export type GetProduct = Awaited<ReturnType<typeof getProduct>>;
