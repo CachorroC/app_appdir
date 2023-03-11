@@ -14,7 +14,7 @@
   color: var(--on-secondary);
 }
 @media screen and (max-width: 600px) {
-  .header .header {
+  .header {
     top: auto;
     bottom: 0;
   }
@@ -98,7 +98,8 @@
   width: 100%;
   height: 100%;
 }
-.drawer .menu .list .item {
+
+.item {
   margin: 0;
   width: auto;
   min-width: 5rem;
@@ -109,32 +110,32 @@
   box-shadow: var(--dp0);
   border-radius: 2rem;
 }
-.drawer .menu .list .item:link {
+.item:link {
   background-color: var(--sf-1);
   color: var(--on-surface);
   box-shadow: var(--dp3);
 }
-.drawer .menu .list .item:link > span {
+.item:link > span {
   color: var(--tertiary);
 }
-.drawer .menu .list .item:visited {
+.item:visited {
   background-color: var(--inverse-outline);
   color: var(--outline);
   box-shadow: var(--dp0);
 }
-.drawer .menu .list .item:visited > span {
+.item:visited > span {
   color: var(--outline);
 }
-.drawer .menu .list .item:hover {
+.item:hover {
   background-color: var(--sf-3);
   box-shadow: var(--dp10);
 }
-.drawer .menu .list .item:focus {
+.item:focus {
   background-color: var(--secondary-container);
   color: var(--on-secondary-container);
   border: 2px dashed var(--secondary);
 }
-.drawer .menu .list .item:active {
+.item:active {
   background-color: var(--sf-5);
   box-shadow: var(--dp8);
 }

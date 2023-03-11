@@ -38,10 +38,10 @@ const Navbar = () =>
           >
             <h1 className={ poiret.className }>{ section.name }</h1>
             <ul className={ styles.list }>
-              { section.items.map( ( item ) => (
+              { section.items.map( ( link ) => (
                 <NavItem
-                  key={ item.slug }
-                  item={ item }
+                  key={ link.slug }
+                  link={ link }
                   close={ close }
                   className={ poiret.className }
                 />
@@ -97,18 +97,18 @@ const Navbar = () =>
   );
 };
 
-const NavItem = ( { item, className, close }: { item: Item; className: string; close: () => false | void } ) =>
+const NavItem = ( { link, className, close }: { link: Item; className: string; close: () => false | void } ) =>
 {
   const segment = useSelectedLayoutSegment();
-  const isActive = item.slug === segment;
+  const isActive = link.slug === segment;
   return (
     <Link
       onClick={ close }
-      href={ `/${ item.slug }` }
-      className={ styles.item }
+      href={ `/${ link.slug }` }
+      className={ styles.link }
     >
-      <span className="material-symbols-outlined">{ item.icon }</span>
-      <p className={ className }>{ item.name }</p>
+      <span className="material-symbols-outlined">{ link.icon }</span>
+      <p className={ className }>{ link.name }</p>
     </Link>
   );
 };

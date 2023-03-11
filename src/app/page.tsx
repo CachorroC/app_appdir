@@ -4,41 +4,44 @@ import styles from '#@/styles/css/page.module.css';
 import Link from 'next/link';
 import { demos } from '#@/lib/demos';
 
-const poiret = Poiret_One({
+const poiret = Poiret_One( {
   weight: '400',
-  subsets: ['latin', 'latin-ext'],
+  subsets: [ 'latin', 'latin-ext' ],
   display: 'swap',
-});
+} );
 
-export default function Home() {
+export default function Home ()
+{
   return (
-    <div className={styles.grid}>
-      {demos.map((section) => {
+    <div className={ styles.grid }>
+      { demos.map( ( section ) =>
+      {
         return (
           <div
-            key={section.name}
-            className={styles.module}
+            key={ section.name }
+            className={ styles.module }
           >
-            <h2>{section.name}</h2>
+            <h2>{ section.name }</h2>
 
-            <div className={styles.grid}>
-              {section.items.map((item) => {
-                return (
-                  <Link
-                    href={`/${item.slug}`}
-                    key={item.name}
-                    className={styles.module}
-                  >
-                    <h3>{item.name}</h3>
 
-                    {item.description ? <p>{item.description}</p> : null}
-                  </Link>
-                );
-              })}
-            </div>
+            { section.items.map( ( item ) =>
+            {
+              return (
+                <Link
+                  href={ `/${ item.slug }` }
+                  key={ item.name }
+                  className={ styles.button }
+                >
+                  <h3>{ item.name }</h3>
+
+                  { item.description ? <p>{ item.description }</p> : null }
+                </Link>
+              );
+            } ) }
+
           </div>
         );
-      })}
+      } ) }
     </div>
   );
 }
