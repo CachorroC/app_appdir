@@ -1,3 +1,4 @@
+
 .header {
   position: fixed;
   top: 0;
@@ -5,12 +6,12 @@
   width: 100%;
   height: 5vh;
   display: grid;
-  box-shadow: var(--md-elevation-3);
-  background-color: var(--md-sys-color-secondary-container);
+  box-shadow: var(--dp3);
+  background-color: var(--secondary-container);
   grid-template-areas: '. button button2 . navbar navbar navbar ';
   & > .button {
-    background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-on-secondary);
+    background-color: var(--secondary);
+    color: var(--on-secondary);
   }
 
   @media screen and (max-width: 600px) {
@@ -66,8 +67,8 @@
 }
 
 .drawer {
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
+  background-color: var(--surface);
+  color: var(--on-surface);
   display: grid;
   height: 100%;
   place-items: stretch;
@@ -77,9 +78,9 @@
   justify-content: space-around;
   text-align: center;
   .menu {
-    background-color: var(--md-surface-1);
-    color: var(--md-sys-color-on-surface);
-    box-shadow: var(--md-elevation-1);
+    background-color: var(--sf-1);
+    color: var(--on-surface);
+    box-shadow: var(--dp1);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -104,35 +105,36 @@
         display: grid;
         align-items: center;
         justify-content: space-evenly;
+        box-shadow: var(--dp0);
         border-radius: 2rem;
         &:link {
-          background-color: var(--md-surface-1);
-          color: var(--md-sys-color-on-surface);
-          box-shadow: var(--md-elevation-3);
+          background-color: var(--sf-1);
+          color: var(--on-surface);
+          box-shadow: var(--dp3);
           & > span {
-            color: var(--md-sys-color-tertiary);
+            color: var(--tertiary);
           }
         }
         &:visited {
-          background-color: var(--md-sys-color-inverse-outline);
-          color: var(--md-sys-color-outline);
-          box-shadow: var(--md-elevation-0);
+          background-color: var(--inverse-outline);
+          color: var(--outline);
+          box-shadow: var(--dp0);
           & > span {
-            color: var(--md-sys-color-outline);
+            color: var(--outline);
           }
         }
         &:hover {
-          background-color: var(--md-surface-3);
-          box-shadow: var(--md-elevation-10);
+          background-color: var(--sf-3);
+          box-shadow: var(--dp10);
         }
         &:focus {
-          background-color: var(--md-sys-color-secondary-container);
-          color: var(--md-sys-color-on-secondary-container);
-          border: 2px dashed var(--md-sys-color-secondary);
+          background-color: var(--secondary-container);
+          color: var(--on-secondary-container);
+          border: 2px dashed var(--secondary);
         }
         &:active {
-          background-color: var(--md-surface-5);
-          box-shadow: var(--md-elevation-8);
+          background-color: var(--sf-5);
+          box-shadow: var(--dp8);
         }
       }
     }
