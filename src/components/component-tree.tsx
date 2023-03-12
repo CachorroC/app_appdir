@@ -9,7 +9,13 @@ type Item = {
   children?: Item[];
 };
 
-const List = ({ items, depth }: { items: Item[]; depth: number }) => {
+const List = ({
+  items,
+  depth,
+}: {
+  items: Item[];
+  depth: number;
+}) => {
   return (
     <div>
       {items.map((item, i) => {
@@ -39,10 +45,15 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
           >
             <div className="flex gap-x-1">
               <div
-                className={clsx('rounded-md px-2 py-0.5 text-xs tracking-wide', {
-                  'bg-vercel-blue text-blue-100': item.type === 'client',
-                  'bg-gray-700 text-gray-200': item.type === 'server',
-                })}
+                className={clsx(
+                  'rounded-md px-2 py-0.5 text-xs tracking-wide',
+                  {
+                    'bg-vercel-blue text-blue-100':
+                      item.type === 'client',
+                    'bg-gray-700 text-gray-200':
+                      item.type === 'server',
+                  },
+                )}
               >
                 <span className="text-white/40">{'<'}</span>
                 {item.name}
@@ -50,9 +61,13 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
               </div>
 
               <div
-                className={clsx('rounded-md bg-gray-800 px-2 py-0.5 text-xs tracking-wide text-white/50', {
-                  'animate-[fadeToTransparent_1s_ease-in-out_forwards_1]': item.type === 'server',
-                })}
+                className={clsx(
+                  'rounded-md bg-gray-800 px-2 py-0.5 text-xs tracking-wide text-white/50',
+                  {
+                    'animate-[fadeToTransparent_1s_ease-in-out_forwards_1]':
+                      item.type === 'server',
+                  },
+                )}
               >
                 <span className="tabular-nums">
                   {item.type === 'client' ? (
@@ -83,7 +98,10 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
 
 // Calculate the total bundle size of a specific component type (client or
 // server) in a tree
-const sum = (items: Item[], componentType: Item['type']): number =>
+const sum = (
+  items: Item[],
+  componentType: Item['type'],
+): number =>
   items.reduce(
     (total, item) =>
       // running total
@@ -91,14 +109,22 @@ const sum = (items: Item[], componentType: Item['type']): number =>
       // add the current component size if it's type is componentType
       ((item.type === componentType ? item.size : 0) || 0) +
       // add the total size of children components recursively
-      (item?.children ? sum(item.children, componentType) : 0),
+      (item?.children
+        ? sum(item.children, componentType)
+        : 0),
     0,
   );
 
-export const ComponentTree = ({ items }: { items: Item[] }) => {
+export const ComponentTree = ({
+  items,
+}: {
+  items: Item[];
+}) => {
   const clientTotal = sum(items, 'client');
   const serverTotal = sum(items, 'server');
-  const clientDeltaAsPercent = Math.round((clientTotal / (clientTotal + serverTotal)) * 100);
+  const clientDeltaAsPercent = Math.round(
+    (clientTotal / (clientTotal + serverTotal)) * 100,
+  );
 
   return (
     <Boundary
@@ -119,19 +145,27 @@ export const ComponentTree = ({ items }: { items: Item[] }) => {
               <div className="flex items-center justify-between gap-x-3">
                 <div className="rounded-md bg-vercel-blue px-2 py-0.5 text-xs tabular-nums tracking-wider text-blue-50">
                   <CountUp
-                    start={(clientTotal + serverTotal) / 1000}
+                    start={
+                      (clientTotal + serverTotal) / 1000
+                    }
                     end={clientTotal / 1000}
                   />{' '}
                   KB
                 </div>
-                <div className="text-sm text-gray-300">Bundle Size</div>
+                <div className="text-sm text-gray-300">
+                  Bundle Size
+                </div>
               </div>
 
               <div className="overflow-hidden rounded-full bg-gray-700">
                 <div
-                  className={clsx('h-2 animate-[translateXReset_1s_ease-in-out_1_reverse] rounded-full bg-vercel-blue')}
+                  className={clsx(
+                    'h-2 animate-[translateXReset_1s_ease-in-out_1_reverse] rounded-full bg-vercel-blue',
+                  )}
                   style={{
-                    transform: `translateX(-${100 - clientDeltaAsPercent}%)`,
+                    transform: `translateX(-${
+                      100 - clientDeltaAsPercent
+                    }%)`,
                   }}
                 />
               </div>
@@ -146,13 +180,18 @@ export const ComponentTree = ({ items }: { items: Item[] }) => {
               </div>
 
               <div className="flex items-center gap-x-3 text-sm text-gray-400">
-                <div className="rounded-md bg-gray-700 px-2 py-0.5 text-xs tracking-widest text-white/50">{'</>'}</div>
+                <div className="rounded-md bg-gray-700 px-2 py-0.5 text-xs tracking-widest text-white/50">
+                  {'</>'}
+                </div>
                 <div>Server Component</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="text-sm italic text-vercel-orange">Note: The component bundle sizes are not yet accurate.</div>
+        <div className="text-sm italic text-vercel-orange">
+          Note: The component bundle sizes are not yet
+          accurate.
+        </div>
       </div>
     </Boundary>
   );

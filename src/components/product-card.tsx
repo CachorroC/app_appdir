@@ -9,8 +9,16 @@ import { dinero, type DineroSnapshot } from 'dinero.js';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const ProductCard = ({ product, href }: { product: Product; href: string }) => {
-  const price = dinero(product.price as DineroSnapshot<number>);
+export const ProductCard = ({
+  product,
+  href,
+}: {
+  product: Product;
+  href: string;
+}) => {
+  const price = dinero(
+    product.price as DineroSnapshot<number>,
+  );
 
   return (
     <Link
@@ -35,9 +43,13 @@ export const ProductCard = ({ product, href }: { product: Product; href: string 
           />
         </div>
 
-        <div className="truncate text-sm font-medium text-white group-hover:text-vercel-cyan">{product.name}</div>
+        <div className="truncate text-sm font-medium text-white group-hover:text-vercel-cyan">
+          {product.name}
+        </div>
 
-        {product.rating ? <ProductRating rating={product.rating} /> : null}
+        {product.rating ? (
+          <ProductRating rating={product.rating} />
+        ) : null}
 
         <ProductPrice
           price={price}
@@ -46,11 +58,17 @@ export const ProductCard = ({ product, href }: { product: Product; href: string 
 
         {/* <ProductSplitPayments price={price} /> */}
 
-        {product.usedPrice ? <ProductUsedPrice usedPrice={product.usedPrice} /> : null}
+        {product.usedPrice ? (
+          <ProductUsedPrice usedPrice={product.usedPrice} />
+        ) : null}
 
-        <ProductEstimatedArrival leadTime={product.leadTime} />
+        <ProductEstimatedArrival
+          leadTime={product.leadTime}
+        />
 
-        {product.stock <= 1 ? <ProductLowStockWarning stock={product.stock} /> : null}
+        {product.stock <= 1 ? (
+          <ProductLowStockWarning stock={product.stock} />
+        ) : null}
       </div>
     </Link>
   );

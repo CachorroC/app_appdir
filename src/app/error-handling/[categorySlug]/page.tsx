@@ -3,13 +3,21 @@ import BuggyButton from '#@/components/buggy-button';
 import { SkeletonCard } from '#@/components/skeleton-card';
 import { notFound } from 'next/navigation';
 
-export default async function Page({ params }: { params: { categorySlug: string } }) {
-  const category = await fetchCategoryBySlug(params.categorySlug);
+export default async function Page({
+  params,
+}: {
+  params: { categorySlug: string };
+}) {
+  const category = await fetchCategoryBySlug(
+    params.categorySlug,
+  );
   if (!category) notFound();
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">All {category.name}</h1>
+      <h1 className="text-xl font-medium text-gray-400/80">
+        All {category.name}
+      </h1>
 
       <BuggyButton />
 

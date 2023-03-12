@@ -6,7 +6,11 @@ export const metadata = {
   title: 'Static Site Generation (SSG)',
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="space-y-9">
       <div className="flex flex-wrap items-center gap-2">

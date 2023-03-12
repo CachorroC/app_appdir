@@ -4,6 +4,7 @@
 (prefers-color-scheme: light);
 @import url(./theme/theme.dark.css)
 (prefers-color-scheme: dark);
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -12,13 +13,13 @@
 :root,
 html {
   box-sizing: border-box;
-  font-size: clamp(
+  /*font-size: clamp(
     var(--minFontSize),
     var(--scaler),
     var(--maxFontSize)
-  );
-  /* font-size: min(max(1rem, 4vw), 22px);
-  font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+  );*/
+  font-size: min(max(1rem, 4vw), 22px);
+  /*font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
 }
 
 html,

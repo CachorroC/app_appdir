@@ -4,13 +4,27 @@
   left: 0;
   width: 100%;
   height: 5vh;
-  display: grid;
+  display: flex;
+  flex-flow: row nowrap;
   box-shadow: var(--dp3);
+  justify-content: space-evenly;
+  align-items: stretch;
+
   background-color: var(--secondary-container);
-  grid-template-areas: '. button button2 . navbar navbar navbar ';
   & > .button {
+    border: 0;
     background-color: var(--secondary);
     color: var(--on-secondary);
+    width: 100%;
+    flex-basis: auto;
+    & > span {
+      width: 100%;
+    }
+    &:hover,
+    &:active {
+      background-color: var(--on-secondary);
+      color: var(--secondary);
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -64,8 +78,8 @@
 }
 
 .drawer {
-  background-color: var(--surface);
-  color: var(--on-surface);
+  background-color: var(--background);
+  color: var(--on-background);
   display: grid;
   height: 100%;
   place-items: stretch;
@@ -75,7 +89,7 @@
   justify-content: space-around;
   text-align: center;
   .menu {
-    background-color: var(--sf-1);
+    background-color: var(--surface);
     color: var(--on-surface);
     box-shadow: var(--dp1);
     display: flex;
@@ -111,6 +125,8 @@
     color: var(--on-surface);
     & > span {
       color: var(--tertiary);
+      font-variation-settings: 'FILL' 0, 'wght' 300,
+        'GRAD' 0, 'opsz' 24;
     }
   }
   &:visited {
@@ -124,6 +140,10 @@
   &:hover {
     background-color: var(--sf-5);
     box-shadow: var(--dp10);
+    & > span {
+      font-variation-settings: 'FILL' 1, 'wght' 600,
+        'GRAD' 200, 'opsz' 48;
+    }
   }
   &:focus {
     background-color: var(--secondary-container);

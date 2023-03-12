@@ -7,12 +7,16 @@ export default function Page() {
 
       <ul>
         <li>
-          This example uses context to share state between Client Components that cross the Server/Client Component
-          boundary.
+          This example uses context to share state between
+          Client Components that cross the Server/Client
+          Component boundary.
         </li>
         <li>
-          Try incrementing the counter and navigating between pages. Note how the counter state is shared across the app
-          even though they are inside different layouts and pages that are Server Components.
+          Try incrementing the counter and navigating
+          between pages. Note how the counter state is
+          shared across the app even though they are inside
+          different layouts and pages that are Server
+          Components.
         </li>
       </ul>
 
@@ -20,7 +24,9 @@ export default function Page() {
         <ExternalLink href="https://beta.nextjs.org/docs/rendering/server-and-client-components#using-context">
           Docs
         </ExternalLink>
-        <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/context">Code</ExternalLink>
+        <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/context">
+          Code
+        </ExternalLink>
       </div>
     </div>
   );

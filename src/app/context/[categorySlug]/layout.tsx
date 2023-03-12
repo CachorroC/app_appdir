@@ -11,7 +11,9 @@ export default async function Layout({
   children: React.ReactNode;
   params: { categorySlug: string };
 }) {
-  const category = await fetchCategoryBySlug(params.categorySlug);
+  const category = await fetchCategoryBySlug(
+    params.categorySlug,
+  );
   if (!category) notFound();
 
   return (

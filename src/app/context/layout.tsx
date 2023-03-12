@@ -9,7 +9,11 @@ export const metadata = {
   title: 'Client Context',
 };
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const categories = await fetchCategories();
   return (
     <Boundary
@@ -18,7 +22,9 @@ export default async function Layout({ children }: { children: React.ReactNode }
       animateRerendering={false}
     >
       <Boundary
-        labels={['Counter Context Provider [Client Component]']}
+        labels={[
+          'Counter Context Provider [Client Component]',
+        ]}
         color="blue"
         size="small"
         animateRerendering={false}

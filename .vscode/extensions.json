@@ -1,3 +1,5 @@
 {
-  "recommendations": ["nucllear.vscode-extension-auto-import"]
+  "recommendations": [
+    "nucllear.vscode-extension-auto-import"
+  ]
 }

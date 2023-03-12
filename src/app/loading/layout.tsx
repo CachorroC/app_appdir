@@ -8,7 +8,11 @@ export const metadata = {
   title: 'Loading',
 };
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const categories = await fetchCategories();
   if (!categories) notFound();
 

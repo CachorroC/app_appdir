@@ -2,12 +2,21 @@
 
 import React, { useState } from 'react';
 import { useServerInsertedHTML } from 'next/navigation';
-import { StyleRegistry, createStyleRegistry } from 'styled-jsx';
+import {
+  StyleRegistry,
+  createStyleRegistry,
+} from 'styled-jsx';
 
-export default function StyledJsxRegistry({ children }: { children: React.ReactNode }) {
+export default function StyledJsxRegistry({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   // Only create stylesheet once with lazy initial state
   // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
-  const [jsxStyleRegistry] = useState(() => createStyleRegistry());
+  const [jsxStyleRegistry] = useState(() =>
+    createStyleRegistry(),
+  );
 
   useServerInsertedHTML(() => {
     const styles = jsxStyleRegistry.styles();
@@ -15,5 +24,9 @@ export default function StyledJsxRegistry({ children }: { children: React.ReactN
     return <>{styles}</>;
   });
 
-  return <StyleRegistry registry={jsxStyleRegistry}>{children}</StyleRegistry>;
+  return (
+    <StyleRegistry registry={jsxStyleRegistry}>
+      {children}
+    </StyleRegistry>
+  );
 }

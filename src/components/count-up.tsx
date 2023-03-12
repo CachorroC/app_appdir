@@ -2,7 +2,15 @@
 
 import { useCountUp } from 'use-count-up';
 
-const CountUp = ({ start, end, duration = 1 }: { start: number; end: number; duration?: number }) => {
+const CountUp = ({
+  start,
+  end,
+  duration = 1,
+}: {
+  start: number;
+  end: number;
+  duration?: number;
+}) => {
   const { value } = useCountUp({
     isCounting: true,
     end,

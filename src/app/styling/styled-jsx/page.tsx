@@ -58,7 +58,9 @@ const SkeletonCard = () => (
 export default function Page() {
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">Styled with Styled JSX</h1>
+      <h1 className="text-xl font-medium text-gray-400/80">
+        Styled with Styled JSX
+      </h1>
       <div className="container">
         <SkeletonCard />
         <SkeletonCard />
@@ -74,7 +76,10 @@ export default function Page() {
 
         @media (min-width: 1024px) {
           .container {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(
+              3,
+              minmax(0, 1fr)
+            );
           }
         }
       `}</style>

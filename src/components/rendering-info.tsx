@@ -1,6 +1,10 @@
 import { RenderedTimeAgo } from './rendered-time-ago';
 
-export function RenderingInfo({ type }: { type: 'ssg' | 'ssgod' | 'ssr' | 'isr' }) {
+export function RenderingInfo({
+  type,
+}: {
+  type: 'ssg' | 'ssgod' | 'ssr' | 'isr';
+}) {
   let msg = '';
   switch (type) {
     case 'ssg':
@@ -10,7 +14,8 @@ export function RenderingInfo({ type }: { type: 'ssg' | 'ssgod' | 'ssr' | 'isr' 
       msg = 'Statically rendered on demand';
       break;
     case 'isr':
-      msg = 'Statically pre-rendered at build time and periodically revalidated';
+      msg =
+        'Statically pre-rendered at build time and periodically revalidated';
       break;
     case 'ssr':
       msg = 'Dynamically rendered at request time';
