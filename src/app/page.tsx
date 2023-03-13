@@ -20,7 +20,6 @@ export default function Home() {
             className={styles.module}
           >
             <h2>{section.name}</h2>
-
             {section.items.map((item) => {
               return (
                 <Link
@@ -29,7 +28,6 @@ export default function Home() {
                   className={styles.button}
                 >
                   <h3>{item.name}</h3>
-
                   {item.description ? (
                     <p>{item.description}</p>
                   ) : null}
