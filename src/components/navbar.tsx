@@ -1,6 +1,6 @@
 'use client';
 import styles from '#@/styles/scss/navbar.module.scss';
-import { demos, type Item } from '#@/lib/demos';
+import { demos, type Item } from '#@/lib/links';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Box, Drawer, Toolbar } from '@mui/material';
