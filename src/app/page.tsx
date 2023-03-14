@@ -13,7 +13,7 @@ const poiret = Poiret_One({
 
 export default async function Home() {
   return (
-    <div className={styles.grid}>
+    <div className={styles.container}>
       {demos.map((section) => {
         return (
           <div
@@ -21,7 +21,7 @@ export default async function Home() {
             className={styles.module}
           >
            
-            <h2>{section.name}</h2>
+            <h2 className={styles.titulo}>{section.name}</h2>
             {section.items.map((item) => {
               return (
                 <Link
