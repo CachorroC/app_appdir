@@ -17,7 +17,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.12",
-    "@next/font": "^13.2.3",
+    "next/font": "latest",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
     "dinero.js": "2.0.0-alpha.8",
