@@ -21,7 +21,6 @@ const Navbar = () => {
   const drawerToggle = () => {
     setIsOpen((prevState) => !prevState);
   };
-
   const drawer = (
     <div
       className={styles.drawer}
@@ -36,7 +35,6 @@ const Navbar = () => {
             <h1 className={poiret.className}>
               {section.name}
             </h1>
-
             {section.items.map((link) => (
               <NavItem
                 key={link.slug}
