@@ -11,27 +11,27 @@ export const demos: { name: string; items: Item[] }[] = [
     items: [
       {
         name: 'Cockpit',
-        slug: 'cockpit',
+        slug: 'https://cockpit.suarez-ramirez.com',
         icon: 'view_quilt',
         description:
           'El dash de control y manejo del servidor en la web',
       },
       {
         name: 'Portainer',
-        slug: 'portainer',
+        slug: 'https://portainer.suarez-ramirez.com',
         icon: 'view_cozy',
         description:
           'el controlador y visor de docks de docker',
       },
       {
         name: 'AdGuardHome',
-        slug: 'adguard',
+        slug: 'https://dns.suarez-ramirez.com',
         icon: 'view_quilt',
         description: '',
       },
       {
         name: 'Homeass',
-        slug: 'homeass',
+        slug: 'https://casa.suarez-ramirez.com',
         icon: 'home',
         description: 'homeass de salitre ',
       },

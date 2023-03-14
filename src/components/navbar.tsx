@@ -36,16 +36,15 @@ const Navbar = () => {
             <h1 className={poiret.className}>
               {section.name}
             </h1>
-            <ul className={styles.list}>
-              {section.items.map((link) => (
-                <NavItem
-                  key={link.slug}
-                  link={link}
-                  close={close}
-                  className={poiret.className}
-                />
-              ))}
-            </ul>
+
+            {section.items.map((link) => (
+              <NavItem
+                key={link.slug}
+                link={link}
+                close={close}
+                className={poiret.className}
+              />
+            ))}
           </nav>
         );
       })}
@@ -120,7 +119,7 @@ const NavItem = ({
   return (
     <Link
       onClick={close}
-      href={`/${link.slug}`}
+      href={link.slug}
       className={styles.link}
     >
       <span className="material-symbols-outlined">

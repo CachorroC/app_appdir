@@ -23,10 +23,13 @@ export default function Home() {
             {section.items.map((item) => {
               return (
                 <Link
-                  href={`/${item.slug}`}
+                  href={item.slug}
                   key={item.name}
                   className={styles.button}
                 >
+                  {
+                    //^ href={`/${item.slug}`}
+                  }
                   <h3>{item.name}</h3>
                   {item.description ? (
                     <p>{item.description}</p>
