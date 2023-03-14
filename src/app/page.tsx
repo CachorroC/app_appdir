@@ -3,18 +3,13 @@ import { Poiret_One } from 'next/font/google';
 import styles from '#@/styles/css/page.module.css';
 import Link from 'next/link';
 import { demos } from '#@/lib/links';
-import {
-  AppContext,
-  AppProvider,
-} from '#@/components/prefers-color-scheme';
-import { Children } from 'react';
-
 const poiret = Poiret_One({
   weight: '400',
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
 });
 
+async function getMongoData
 export default function Home() {
   return (
     <div className={styles.grid}>
@@ -24,8 +19,6 @@ export default function Home() {
             key={section.name}
             className={styles.module}
           >
-            <AppContext />
-            <AppProvider />
             <h2>{section.name}</h2>
             {section.items.map((item) => {
               return (
