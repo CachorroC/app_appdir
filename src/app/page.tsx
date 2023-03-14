@@ -9,7 +9,6 @@ const poiret = Poiret_One({
   display: 'swap',
 });
 
-async function getMongoData
 export default function Home() {
   return (
     <div className={styles.grid}>
